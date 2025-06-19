@@ -92,7 +92,7 @@ pipeline {
                     
                 '''
                     script {
-                        env.STAGING_URL = sh(script: "node_modules/.bin/netlify deploy --dir=build --no-build", requiredStdout: true)
+                        env.STAGING_URL = sh(script: "node_modules/.bin/netlify deploy --dir=build --no-build --json", requiredStdout: true)
                 }
             }
 
